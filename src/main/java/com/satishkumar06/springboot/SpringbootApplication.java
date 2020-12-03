@@ -89,11 +89,21 @@ public class SpringbootApplication {
 //		userRepository.deleteById(4);
 //		System.out.println("deleted");
 		
-		Iterable<User> alluser = userRepository.findAll();
-		alluser.forEach(user->{
-			System.out.println(user);
-		});
-		userRepository.deleteAll(alluser);
+//		Iterable<User> alluser = userRepository.findAll();
+//		alluser.forEach(user->{
+//			System.out.println(user);
+//		});
+//		userRepository.deleteAll(alluser);
+		
+		
+//	    List<User> users = userRepository.findByName("Ankit");
+//	    users.forEach(e->System.out.println(e));
+		
+//		List<User> users = userRepository.findByNameAndCity("Uttam", "City1");
+//		users.forEach(e->System.out.println(e));
+		
+		List<User> users = userRepository.findByCityStartingWith("C");
+		users.forEach(e->System.out.println(e));
 	}
 
 }
