@@ -102,8 +102,27 @@ public class SpringbootApplication {
 //		List<User> users = userRepository.findByNameAndCity("Uttam", "City1");
 //		users.forEach(e->System.out.println(e));
 		
-		List<User> users = userRepository.findByCityStartingWith("C");
-		users.forEach(e->System.out.println(e));
+//		List<User> users = userRepository.findByCityStartingWith("C");
+//		users.forEach(e->System.out.println(e));
+		
+//		List<User> allUser = userRepository.getAllUser();
+//		allUser.forEach(e->{
+//			System.out.println(e);
+//		});
+		
+//		List<User> userByName = userRepository.getUserByName("Ankit");
+//		userByName.forEach(e->{
+//			System.out.println(e);
+//		});
+		
+//		List<User> userByNameAndCity = userRepository.getUserByNameAndCity("Uttam", "City1");
+//		userByNameAndCity.forEach(e->{
+//			System.out.println(e);
+//		});
+		
+		userRepository.getUsers().forEach(e->{
+			System.out.println(e);
+		});
 	}
 
 }
